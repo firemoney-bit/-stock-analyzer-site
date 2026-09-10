@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://firemoney-bit.github.io/-stock-analyzer-site/sitemap.xml
