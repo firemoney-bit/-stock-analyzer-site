@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="日本株の株価・業績・財務・決算・同業比較・公式開示をスマホで見やすく整理する株式分析ツール。">
+  <meta name="theme-color" content="#070b12">
+  <title>Stock Analyzer｜日本株を数字でわかりやすく</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top"><span class="brand-mark">S</span><span>Stock Analyzer</span></a>
+      <nav class="desktop-nav">
+        <a href="#features">機能</a><a href="#how">使い方</a><a href="#plans">プラン</a><a href="#faq">FAQ</a>
+      </nav>
+      <a class="header-cta" href="https://firemoney-bit-stock-analyzer-app-8zaeie.streamlit.app/" target="_blank" rel="noopener">分析する</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">JAPANESE STOCK ANALYSIS</p>
+          <h1>日本株を、<br><span>数字でわかりやすく。</span></h1>
+          <p class="hero-copy">株価・業績・財務・キャッシュフロー・決算トレンド・同業比較・公式開示を、ひとつの画面で整理します。</p>
+
+          <form class="stock-search" id="stockSearch">
+            <label for="stockCode">銘柄コードからすぐ分析</label>
+            <div class="search-row">
+              <input id="stockCode" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" placeholder="例：8267" aria-label="4桁の銘柄コード">
+              <button type="submit">分析する</button>
+            </div>
+            <small>4桁の日本株コードを入力してください。</small>
+          </form>
+
+          <div class="popular">
+            <span>例：</span>
+            <button data-code="8267">8267</button>
+            <button data-code="7011">7011</button>
+            <button data-code="8306">8306</button>
+          </div>
+        </div>
+
+        <div class="mock-card">
+          <div class="mock-top">
+            <div><span class="mock-label">分析サマリー</span><strong>72</strong><span>/100</span></div>
+            <span class="mock-badge">良い</span>
+          </div>
+          <div class="score-row"><span>収益性</span><div><i style="width:78%"></i></div><b>78</b></div>
+          <div class="score-row"><span>成長性</span><div><i style="width:84%"></i></div><b>84</b></div>
+          <div class="score-row"><span>財務</span><div><i style="width:63%"></i></div><b>63</b></div>
+          <div class="score-row"><span>株主還元</span><div><i style="width:70%"></i></div><b>70</b></div>
+          <div class="score-row"><span>割安性</span><div><i style="width:65%"></i></div><b>65</b></div>
+          <div class="mini-stats">
+            <div><small>PER</small><strong>18.4倍</strong></div>
+            <div><small>PBR</small><strong>1.32倍</strong></div>
+            <div><small>配当利回り</small><strong>2.8%</strong></div>
+          </div>
+          <p class="mock-note">※数値はデザインイメージです。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker-strip">
+      <div class="container">
+        <span>株価</span><span>業績</span><span>財務</span><span>決算</span><span>CF</span><span>比較</span><span>公式開示</span>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">FEATURES</p>
+          <h2>見るべき数字を、見やすく。</h2>
+          <p>指標を並べるだけではなく、推移・比較・スコアまでまとめて確認できます。</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card"><span>01</span><h3>株価分析</h3><p>移動平均、52週高値・安値、騰落率、ボラティリティ、最大ドローダウン。</p></article>
+          <article class="feature-card"><span>02</span><h3>業績・財務</h3><p>売上、利益、ROE、自己資本比率、PER・PBRなどを整理。</p></article>
+          <article class="feature-card"><span>03</span><h3>決算トレンド</h3><p>増収・増益、EPS、営業利益率の変化を年度ごとに比較。</p></article>
+          <article class="feature-card"><span>04</span><h3>同業比較</h3><p>複数銘柄を同じ基準で並べて違いを確認。</p></article>
+          <article class="feature-card"><span>05</span><h3>CF分析</h3><p>営業CF・投資CF・財務CF・FCFから資金の流れを確認。</p></article>
+          <article class="feature-card"><span>06</span><h3>公式開示</h3><p>EDINETの公式開示から重要な書類を確認。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="how">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">HOW TO USE</p><h2>使い方は3ステップ。</h2></div>
+        <div class="steps">
+          <div class="step"><b>1</b><div><h3>銘柄コードを入力</h3><p>4桁のコードを入力。</p></div></div>
+          <div class="step"><b>2</b><div><h3>分析を実行</h3><p>株価・業績・財務情報を取得。</p></div></div>
+          <div class="step"><b>3</b><div><h3>比較して確認</h3><p>スコアと元指標の両方を確認。</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="plans">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">PLAN</p><h2>現在は無料公開中。</h2><p>まず使ってもらい、将来Pro機能を追加できる構成にしています。</p></div>
+        <div class="plan-grid">
+          <article class="plan-card featured">
+            <p class="plan-kicker">FREE</p>
+            <div class="price">¥0</div>
+            <ul><li>基本分析</li><li>業績・財務</li><li>決算トレンド</li><li>同業比較</li><li>公式開示</li></ul>
+            <a class="button primary full" href="https://firemoney-bit-stock-analyzer-app-8zaeie.streamlit.app/" target="_blank" rel="noopener">無料で使う</a>
+          </article>
+          <article class="plan-card">
+            <p class="plan-kicker">PRO</p>
+            <div class="price muted-price">準備中</div>
+            <ul><li>高度分析</li><li>比較機能拡張</li><li>広告非表示などを検討</li><li>提供内容は今後決定</li></ul>
+            <button class="button disabled full" disabled>Coming soon</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">PARTNER</p><h2>おすすめサービス</h2><p>将来、証券会社などの広告・アフィリエイトを掲載するスペースです。</p></div>
+        <div class="ad-placeholder"><span>ADVERTISEMENT / AFFILIATE</span><strong>広告掲載予定</strong><p>提携後にバナーや紹介リンクを設置できます。</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container narrow">
+        <div class="section-heading"><p class="eyebrow">FAQ</p><h2>よくある質問</h2></div>
+        <details><summary>無料で使えますか？</summary><p>現在公開中の分析ツールは無料で利用できます。</p></details>
+        <details><summary>スマホでも使えますか？</summary><p>はい。スマートフォンでの利用を前提に調整しています。</p></details>
+        <details><summary>スコアは売買推奨ですか？</summary><p>いいえ。公開情報を一定ルールで整理した参考値であり、個別銘柄の売買を推奨するものではありません。</p></details>
+        <details><summary>Pro版はありますか？</summary><p>現在は準備中です。利用状況を見ながら内容を検討します。</p></details>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-box">
+        <div><p class="eyebrow">START ANALYSIS</p><h2>気になる日本株を分析。</h2><p>銘柄コードを入力するだけで始められます。</p></div>
+        <a class="button light" href="https://firemoney-bit-stock-analyzer-app-8zaeie.streamlit.app/" target="_blank" rel="noopener">無料で分析する</a>
+      </div>
+    </section>
+
+    <section class="legal-note">
+      <div class="container narrow">
+        <h2>ご利用にあたって</h2>
+        <p>本サービスは公開情報・財務情報等を整理・可視化する情報提供ツールです。特定の金融商品の取得・売却・保有その他の取引を推奨するものではありません。表示情報のみを根拠とせず、一次情報等をご自身で確認してください。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div><a class="brand" href="#top"><span class="brand-mark">S</span><span>Stock Analyzer</span></a><p>日本株を、数字でわかりやすく。</p></div>
+      <nav><a href="#features">機能</a><a href="#plans">プラン</a><a href="#faq">FAQ</a></nav>
+    </div>
+    <div class="container copyright">© 2026 Stock Analyzer</div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
